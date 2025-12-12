@@ -1,0 +1,301 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hana </title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(
+          135deg,
+          #0a0a0a 0%,
+          #1a0505 50%,
+          #0a0a0a 100%
+        );
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .hana {
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        animation: floatIn 1.5s ease-out;
+      }
+
+      @keyframes floatIn {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .aragshaa {
+        display: flex;
+        width: 100%;
+        animation: slideIn 0.8s ease-out backwards;
+      }
+
+      .aragshaa:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .aragshaa:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .aragshaa:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .aragshaa:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .aragshaa:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .buten,
+      .tal {
+        border: 2px solid rgba(139, 0, 0, 0.8);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .buten {
+        width: 120px;
+        height: 50px;
+        background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+      }
+
+      .tal {
+        width: 70px;
+        height: 50px;
+        background: linear-gradient(135deg, #ee0000 0%, #bb0000 100%);
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+      }
+
+      .buten::before,
+      .tal::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .buten:hover::before,
+      .tal:hover::before {
+        left: 100%;
+      }
+
+      .buten:hover,
+      .tal:hover {
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+        filter: brightness(1.2);
+      }
+
+      .buten::after,
+      .tal::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, #ff6b6b, #ff0000, #ff6b6b);
+        background-size: 200% 100%;
+        animation: shimmer 3s linear infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      .aragshaa:hover .buten,
+      .aragshaa:hover .tal {
+        animation: pulse 0.6s ease-in-out;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.03);
+        }
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+            circle at 20% 50%,
+            rgba(255, 0, 0, 0.03) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(255, 0, 0, 0.03) 0%,
+            transparent 50%
+          );
+        animation: drift 20s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      @keyframes drift {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-50px, -50px);
+        }
+      }
+      .buten::after,
+      .tal::after {
+        animation: shimmer 3s linear infinite,
+          glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          opacity: 0.6;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style> 
+  </head> 
+  <body> 
+    <div class="hana">
+      <div class="aragshaa">
+        <div class="tal"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="tal"></div>
+      </div>
+      <div class="aragshaa">
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+      </div>
+      <div class="aragshaa">
+         <div class="tal"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="tal"></div>
+      </div>
+      <div class="aragshaa">
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+      </div>
+      <div class="aragshaa">
+        <div class="tal"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="buten"></div>
+        <div class="tal"></div> 
+       </div>
+     </div> 
+  </body> 
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass UI Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     LEFT: Document Card
+    <div class="glass-card">
+        <h3>Document</h3>
+        <ul>
+            <li>📄 Atlas_Group_Team_Onboarding_Guide.pdf</li>
+            <li>📄 Vertex_Systems_Quarterly_Review_Q1_2024.pdf</li>
+            <li>📄 Zenith_Consulting_Service_Agreement_2023.pdf</li>
+            <li>📄 Beta_Solutions_Client_Contract_2022.docx</li>
+            <li>📄 Acme_Corp_Agreement_2023.pdf</li>
+            <li>📄 Gamma_Tech_Partnership_Agreement.pdf</li>
+        </ul>
+        <span class="more">+ 331 more</span>
+    </div>
+
+  CENTER: Floating Icons 
+    <div class="icon-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/fidget-spinner.png" width="50">
+        <img src="https://img.icons8.com/color/48/000000/ms-word.png" width="50">
+    </div>
+
+    RIGHT: Menu
+    <div class="menu-box">
+        <input type="text" placeholder="What would you like to do?">
+        <button class="dropdown-btn">+ Add sources</button>
+
+        <div class="dropdown">
+            <p>🌐 Web search</p>
+            <p>⚖ Legal search</p>
+            <p>🗄 Database search</p>
+        </div>
+    </div>
+
+</body>
+</html> -->
