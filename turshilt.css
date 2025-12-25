@@ -1,0 +1,87 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #111;
+            color: white;
+        }
+
+        header {
+            padding: 15px;
+            text-align: center;
+            background: #000;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #222;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+    
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 320px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        #close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #chapterList {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        #chapterList li {
+            padding: 8px;
+            border-bottom: 1px solid #444;
+            cursor: pointer;
+        }
+
+        #chapterList li:hover {
+            background: #333;
+        }
+  

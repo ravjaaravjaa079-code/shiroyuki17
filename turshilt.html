@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RP MANGA</title>
+    <link rel="stylesheet" href="turshilt.css">
+</head>
+<body>
+<header>
+    <h1>RP MANGA</h1>
+</header>
+
+
+    <header>
+        <div class="profile" id="profileBtn"> Profile</div>
+    </header>
+    <div class="modal" id="loginModal">
+    <div class="modal-content">
+        <h3>Login</h3>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+    </div>
+
+    <main id="mangaList" class="grid"></main>
+    <div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="close">&times;</span>
+        <img id="modalImg">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <ul id="chapterList"></ul>
+    </div>
+    </div>
+
+
+<script src="turshilt.js"></script>
+
+</body>
+</html>
